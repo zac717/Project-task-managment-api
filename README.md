@@ -2,11 +2,11 @@
 
 This project management API is a simple web API where you make CRUD calls to a server to organize a project management app.
 
-[demo here](https://mercury-task-management-app.herokuapp.com/)
+[demo here]()
 
 ## Front-end Project Task Management Interface
 
-You can use this API in conjunction with my front-end project management app [see the repo](https://github.com/christine-contreras/project-task-management-client)
+You can use this API in conjunction with my front-end project management app [see the repo](https://github.com/zac717/project-management-client.git)
 
 ## Technologies Used in API
 
@@ -29,10 +29,7 @@ rake db:migrate
 rake db:seed
 
 # start server
-shotgun
-```
-
-Shotgun uses port 9393 by default.
+rake start
 
 ## Relationships within Database
 
@@ -69,7 +66,7 @@ Shows you projects and all of the tasks associated with the project
 
 ```js
 
-fetch('http://localhost:9393/projects')
+fetch('http://localhost:9292/projects')
       .then((res) => res.json())
       .then((data) => data.projects)
 
@@ -144,7 +141,7 @@ updated_at: "2021-09-28T23:50:45.680Z"
 Shows you all boards and tasks associated with the project
 
 ```js
-fetch('http://localhost:9393/projects/1')
+fetch('http://localhost:9292/projects/1')
       .then((res) => res.json())
       .then((data) => data.projects)
 
@@ -250,7 +247,7 @@ You can make all CRUD calls for the projects database.
 ### Example: Create a Board
 
 ```js
-fetch('http://localhost:9393/boards/', {
+fetch('http://localhost:9292/boards/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -287,7 +284,7 @@ You can make all CRUD calls for the projects database.
 ### Example: Delete a Task
 
 ```js
-fetch(`http://localhost:9393/tasks/11`, {
+fetch(`http://localhost:9292/tasks/11`, {
       method: 'DELETE',
     })
 
