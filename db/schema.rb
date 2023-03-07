@@ -10,34 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_03_065348) do
-  create_table "boards", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "project_id"
-    t.index ["project_id"], name: "index_boards_on_project_id"
-  end
-
+ActiveRecord::Schema[7.0].define(version: 2023_03_07_072806) do
   create_table "projects", force: :cascade do |t|
     t.string "title"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "color"
-    t.boolean "favorite"
+    t.string "description"
+    t.boolean "completed"
   end
 
-  create_table "tasks", force: :cascade do |t|
-    t.string "name"
-    t.date "due_date"
-    t.text "description"
-    t.string "status"
-    t.string "priority"
-    t.boolean "completed"
-    t.integer "board_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["board_id"], name: "index_tasks_on_board_id"
+  create_table "users", force: :cascade do |t|
+    t.string "full_name"
+    t.string "email"
+    t.string "password_hash"
   end
 
 end
