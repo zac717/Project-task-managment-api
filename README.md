@@ -6,7 +6,7 @@ This project management API is a simple web API where you make CRUD calls to a s
 
 ## Front-end Project Task Management Interface
 
-You can use this API in conjunction with my front-end project management app [see the repo](https://github.com/zac717/project-management-client.git)
+You can use this API in conjunction with my front-end project management app [see the repo](https://github.com/zac717/phase-3-project-management-app-frontend.git)
 
 ## Technologies Used in API
 
